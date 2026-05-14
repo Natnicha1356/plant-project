@@ -30,6 +30,7 @@ st.divider()
 @st.cache_resource
 def load_model():
     return easyocr.Reader(['en'], gpu=False)
+
 def log_data(unit_name, extracted_texts):
     """ฟังก์ชันบันทึกข้อมูลแยกตามชื่อเครื่องลงฐานข้อมูล CSV"""
     filename = f"database_{unit_name}.csv"
